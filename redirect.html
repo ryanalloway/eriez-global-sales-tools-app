@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eriez Microsoft authentication</title>
+  </head>
+  <body>
+    <p>Completing Eriez Microsoft authentication…</p>
+    <script type="module">
+      import { broadcastResponseToMainFrame } from "@azure/msal-browser/redirect-bridge";
+      broadcastResponseToMainFrame().catch(console.error);
+    </script>
+  </body>
+</html>

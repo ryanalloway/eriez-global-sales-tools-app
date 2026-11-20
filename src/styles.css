@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-eriez: #f37021;
+  --color-eriez-hover: #d85e13;
+  --color-ember: #fff0e6;
+  --color-canvas: #f8fafc;
+  --color-ink: #1e293b;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+}
+
+@layer base {
+  :root {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    color-scheme: light;
+    font-synthesis: none;
+  }
+  html {
+    @apply min-w-[320px];
+  }
+  body {
+    @apply m-0 bg-canvas text-ink;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+  button {
+    @apply cursor-pointer transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-55;
+  }
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  summary:focus-visible {
+    @apply outline-2 outline-offset-[3px] outline-eriez;
+  }
+  input:not([type="checkbox"]),
+  select,
+  textarea {
+    @apply block min-h-10 w-full min-w-0 rounded-lg border border-slate-300 bg-white px-3 py-[9px] text-ink transition-colors hover:border-slate-400 focus:border-eriez focus:outline-2 focus:outline-offset-0 focus:outline-eriez/20;
+  }
+  input::placeholder {
+    @apply text-slate-400;
+  }
+  input[type="checkbox"] {
+    @apply size-4 min-h-0 shrink-0 accent-eriez;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold leading-snug text-ink;
+  }
+  h1 {
+    @apply my-[7px] text-[27px] tracking-tight max-[760px]:text-2xl;
+  }
+  h2 {
+    @apply text-[19px] tracking-tight;
+  }
+  h3 {
+    @apply mb-[14px] text-base;
+  }
+  h4 {
+    @apply my-3 text-sm;
+  }
+  p {
+    @apply leading-relaxed text-muted;
+  }
+}

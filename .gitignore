@@ -1,0 +1,139 @@
+# ============================================================
+# Universal .gitignore — Python, Node.js, React, TypeScript,
+# Next.js, Vite, and common development tools
+# ============================================================
+ 
+# --- Secrets and local configuration ---
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+ 
+# --- Dependency directories ---
+node_modules/
+bower_components/
+.pnp.*
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+ 
+# --- JavaScript / TypeScript / React build output ---
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.astro/
+.angular/cache/
+.vercel/
+.netlify/
+.turbo/
+.parcel-cache/
+.vite/
+storybook-static/
+*.tsbuildinfo
+next-env.d.ts
+*.timestamp-*.mjs
+*.timestamp-*.js
+ 
+# --- Python bytecode and caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.pyright/
+ 
+# --- Python environments / packaging ---
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+.tox/
+.nox/
+.pdm-build/
+__pypackages__/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+wheels/
+*.whl
+ 
+# --- Tests and coverage ---
+coverage/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+ 
+# --- Logs, temporary files and caches ---
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+.stylelintcache
+.cache/
+.tmp/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.pid
+ 
+# --- Local databases (remove these rules if DB files are source assets) ---
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+ 
+# --- Editors and IDEs ---
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
+*.sublime-workspace
+*.suo
+*.user
+ 
+# --- OS metadata ---
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+ 
+# Keep dependency lockfiles in Git for reproducible builds:
+# package-lock.json, pnpm-lock.yaml, yarn.lock, poetry.lock,
+# uv.lock, Pipfile.lock — none are ignored here.
